@@ -1,14 +1,14 @@
- name: GitOps Pipeline with ArgoCD
+name: GitOps Pipeline with ArgoCD
 
- on: 
-    push:
+on:
+     push:
         branches: 
             - main          
- env:
+env:
      PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
 
- jobs:
+jobs:
     build:
         runs-on: ubuntu-latest
         steps: 
